@@ -107,11 +107,11 @@ const Screensaver = ({ idleTimeout = 100000, quoteInterval = 5000 }) => {
           {/* Content layout */}
           <div className="w-full h-full absolute inset-0 flex flex-col">
             <div className="h-[60vh] flex items-center justify-center z-50">
-              <img src="./logo.png" alt="Logo" className=" h-auto w-[70vw]" />
+              <img src="./logo.png" alt="Logo" className="w-auto h-[60vw]" />
             </div>
 
             <div className="h-[10vh] flex justify-center items-center p-6 z-50">
-              <button className="px-4 py-2 border-2 border-yellow-500 text-yellow-500 bg-transparent rounded-lg">
+              <button className="text-4xl px-4 py-2 border-2 border-yellow-500 text-yellow-500 bg-transparent rounded-lg">
                 Tap to Start
               </button>
             </div>
