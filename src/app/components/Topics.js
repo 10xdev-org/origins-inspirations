@@ -34,6 +34,10 @@ const Topics = () => {
       {" "}
       {/* Added overflow-hidden to prevent scrolling */}
       {/* Left Column: Geometrical Pattern and Text */}
+      {/* Right Column: Card with Search and List */}
+      <div className="w-2/3 flex items-start justify-start">
+        <OneTopic topic={selectedTopic} />
+      </div>
       <div className="w-1/3 flex justify-start items-start overflow-y-auto">
         {" "}
         {/* Enable scrolling for the left column */}
@@ -68,10 +72,6 @@ const Topics = () => {
             ))}
           </div>
         </div>
-      </div>
-      {/* Right Column: Card with Search and List */}
-      <div className="w-2/3 flex items-start justify-start">
-        <OneTopic topic={selectedTopic} />
       </div>
     </div>
   );

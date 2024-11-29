@@ -19,6 +19,11 @@ export default function Landing({
           >
             {/* Title */}
             <h3 className="text-xl font-semibold">
+              <img
+                src={"./app icons-03.svg"}
+                alt={"members-icon"}
+                className="w-40 h-40 object-cover rounded-md"
+              />
               Influences to the Constitution
             </h3>
           </div>
@@ -28,15 +33,25 @@ export default function Landing({
             onClick={handleTopicsClick}
           >
             <h3 className="text-xl font-semibold">
+              <img
+                src={"./app icons-02.svg"}
+                alt={"members-icon"}
+                className="w-40 h-40 object-cover rounded-md"
+              />
               Origins of the Constitution
             </h3>
           </div>
           <div
-            className="bg-green-500 text-white p-6 rounded cursor-pointer"
+            className="bg-yellow-500 text-white p-6 rounded cursor-pointer"
             onClick={handleAlternateConstitutionsClick}
           >
             <h3 className="text-xl font-semibold">
-              Alternate Constitutional Conceptions
+              <img
+                src={"./app icons-01.svg"}
+                alt={"members-icon"}
+                className="w-40 h-40 object-cover rounded-md"
+              />
+              Alternate Versions of Constitution
             </h3>
           </div>
         </div>

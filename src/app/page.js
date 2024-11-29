@@ -5,6 +5,7 @@ import Topics from "./components/Topics";
 import AlternateConstitutions from "./components/AlternateConstitutions";
 import ActionBar from "./components/ActionBar";
 import Landing from "./components/Landing";
+import BackButtons from "./components/BackButtons";
 
 export default function Page() {
   const [showCountries, setShowCountries] = useState(false);
@@ -38,7 +39,7 @@ export default function Page() {
 
   return (
     <div className="flex flex-col h-screen">
-      <div className="flex-grow overflow-hidden pb-14">
+      <div className="flex-grow overflow-hidden">
         {!showTopics && !showCountries && !showAlternateConstitutions && (
           <Landing
             handleTopicsClick={handleTopicsClick}
@@ -48,20 +49,14 @@ export default function Page() {
             }
           />
         )}
+
         {showCountries && <Countries />}
         {showTopics && <Topics />}
         {showAlternateConstitutions && <AlternateConstitutions />}
       </div>
-      <ActionBar
-        showCountries={showCountries}
-        showTopics={showTopics}
-        showAlternateConstitutions={showAlternateConstitutions}
-        toHome={toHome}
-        handleTopicsClick={handleTopicsClick}
-        handleCountriesClick={handleCountriesClick}
-        handleAlternateConstitutionsClick={handleAlternateConstitutionsClick}
-        className="fixed bottom-0 left-0 right-0 h-12" // Fixed positioning
-      />
+      {(showCountries || showTopics || showAlternateConstitutions) && (
+        <BackButtons onBack={toHome} onHome={toHome} />
+      )}
     </div>
   );
 }

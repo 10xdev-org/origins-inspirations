@@ -47,7 +47,7 @@ const quotes = [
   },
 ];
 
-const Screensaver = ({ idleTimeout = 15000, quoteInterval = 5000 }) => {
+const Screensaver = ({ idleTimeout = 100000, quoteInterval = 5000 }) => {
   const { screensaverDisabled, setScreensaverDisabled } =
     useScreensaverContext();
   const [isIdle, setIsIdle] = useState(false);
@@ -95,12 +95,35 @@ const Screensaver = ({ idleTimeout = 15000, quoteInterval = 5000 }) => {
           {/* Video background */}
           <video
             className="w-full h-full object-cover"
-            src="./indian_parliament.mp4"
+            src="./screensaver.mp4"
             autoPlay
             loop
             muted
             playsInline
           />
+          {/* Overlay over the video */}
+          <div className="absolute inset-0 bg-black bg-opacity-70 z-40"></div>
+
+          {/* Content layout */}
+          <div className="w-full h-full absolute inset-0 flex flex-col">
+            <div className="h-[60vh] flex items-center justify-center z-50">
+              <img src="./logo.png" alt="Logo" className=" h-auto w-[70vw]" />
+            </div>
+
+            <div className="h-[10vh] flex justify-center items-center p-6 z-50">
+              <button className="px-4 py-2 border-2 border-yellow-500 text-yellow-500 bg-transparent rounded-lg">
+                Tap to Start
+              </button>
+            </div>
+
+            {/* Right Half - Text */}
+            <div className="h-[30vh] w-full flex items-center justify-center text-center z-50 px-4">
+              <h1 className="text-6xl font-bold text-white">
+                Origins and{" "}
+                <span className="text-yellow-500">INSPIRATIONS</span>
+              </h1>
+            </div>
+          </div>
           {/* <Overlay animate /> */}
           {/* <div className="absolute bottom-5 z-20 w-full text-center px-4">
             <div className="bg-blue-500 bg-opacity-0 rounded-lg p-4">

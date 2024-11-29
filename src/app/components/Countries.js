@@ -23,6 +23,10 @@ const Countries = () => {
       {" "}
       {/* Added overflow-hidden to prevent scrolling */}
       {/* Left Column: Geometrical Pattern and Text */}
+      {/* Right Column: Card with Search and List */}
+      <div className="w-3/4 flex items-start justify-start">
+        <OneCountry country={selectedCountry} />
+      </div>
       <div className="w-1/4 flex justify-start items-start overflow-y-auto">
         {" "}
         {/* Enable scrolling for the left column */}
@@ -51,10 +55,6 @@ const Countries = () => {
             ))}
           </div>
         </div>
-      </div>
-      {/* Right Column: Card with Search and List */}
-      <div className="w-3/4 flex items-start justify-start">
-        <OneCountry country={selectedCountry} />
       </div>
     </div>
   );
