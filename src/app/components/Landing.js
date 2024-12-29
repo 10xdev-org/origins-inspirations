@@ -10,7 +10,7 @@ export default function Landing({
 }) {
   return (
     <div className="relative h-screen p-6">
-      <Hero videoSrc={"./indian_parliament.mp4"} />
+      <Hero videoSrc={"./screensaver.mp4"} />
       <div className="relative z-10 flex flex-col items-center justify-center h-full">
         <div className="flex space-x-6">
           <div
